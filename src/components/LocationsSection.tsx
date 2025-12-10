@@ -61,7 +61,7 @@ const LocationsSection = () => {
             <span className="font-body text-sm font-medium uppercase tracking-widest text-muted-foreground">
               Find Us
             </span>
-            <h2 className="mt-3 text-4xl font-bold text-foreground md:text-5xl font-sans">Visit Our Locatios</h2>
+            <h2 className="mt-3 text-4xl font-bold text-foreground md:text-5xl font-sans">Visit Our Locations</h2>
             <p className="mt-4 font-body text-lg text-muted-foreground">Two premises thoughtfully positioned across Athens</p>
 
             <div className="mt-10 space-y-6">
