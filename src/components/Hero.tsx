@@ -34,18 +34,23 @@ const Hero = () => {
           <p className="mx-auto mt-4 max-w-md font-body text-lg text-muted-foreground md:text-xl">
             Crafted with love in Greece. 100% beef, brioche buns, and that perfect smash.
           </p>
+          <p className="mx-auto mt-2 max-w-sm font-body text-sm text-muted-foreground">
+            Order via Wolt for delivery or pickup!
+          </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="#menu"
+              href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-secondary px-8 py-3.5 font-body text-sm font-medium text-secondary-foreground shadow-soft transition-all hover:shadow-hover hover:scale-105"
             >
-              View Menu
+              Order on Wolt
             </a>
             <a
-              href="#locations"
+              href="#menu"
               className="inline-flex items-center justify-center rounded-full border-2 border-secondary bg-transparent px-8 py-3.5 font-body text-sm font-medium text-secondary transition-all hover:bg-secondary hover:text-secondary-foreground"
             >
-              Find Us
+              View Menu
             </a>
           </div>
         </div>

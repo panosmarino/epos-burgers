@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.jpg";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -27,6 +28,23 @@ const Footer = () => {
               className="font-body text-sm transition-opacity hover:opacity-70"
             >
               Locations
+            </a>
+            <a
+              href="https://www.instagram.com/eposburgers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-70"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm transition-opacity hover:opacity-70"
+            >
+              Order on Wolt
             </a>
           </div>
 
