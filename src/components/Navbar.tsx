@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.jpg";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,10 +50,21 @@ const Navbar = () => {
             Locations
           </a>
           <a
-            href="#locations"
+            href="https://www.instagram.com/eposburgers/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground transition-colors hover:text-secondary"
+            aria-label="Follow us on Instagram"
+          >
+            <Instagram className="h-5 w-5" />
+          </a>
+          <a
+            href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-2.5 font-body text-sm font-medium text-secondary-foreground transition-all hover:opacity-90"
           >
-            Order Now
+            Order on Wolt
           </a>
         </div>
 
@@ -90,11 +101,23 @@ const Navbar = () => {
               Locations
             </a>
             <a
-              href="#locations"
+              href="https://www.instagram.com/eposburgers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 font-body text-lg font-medium text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Instagram className="h-5 w-5" />
+              Instagram
+            </a>
+            <a
+              href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 font-body text-sm font-medium text-secondary-foreground"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Order Now
+              Order on Wolt
             </a>
           </div>
         </div>
