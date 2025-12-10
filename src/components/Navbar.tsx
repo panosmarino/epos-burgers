@@ -24,15 +24,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
+        <a href="#" className="flex items-center">
           <img
             src={logo}
             alt="Epos Burgers"
             className="h-10 w-10 rounded-full object-cover"
           />
-          <span className="font-display text-lg font-semibold text-secondary">
-            Epos Burgers
-          </span>
         </a>
 
         {/* Desktop Navigation */}
