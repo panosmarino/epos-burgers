@@ -14,18 +14,18 @@ const MenuItem = ({
   image,
   featured
 }: MenuItemProps) => {
-  return <div className={`group relative overflow-hidden rounded-2xl bg-card transition-all duration-300 hover:shadow-hover ${featured ? 'shadow-card' : 'shadow-soft'}`}>
-      {image && <div className="aspect-square overflow-hidden">
+  return <div className={`group relative overflow-hidden rounded-xl bg-card transition-all duration-300 hover:shadow-hover ${featured ? 'shadow-card' : 'shadow-soft'}`}>
+      {image && <div className="aspect-[4/3] overflow-hidden">
           <img src={image} alt={name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>}
-      <div className="p-5">
+      <div className="p-4">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-semibold text-foreground text-2xl font-sans">{name}</h3>
-          <span className="whitespace-nowrap rounded-full bg-primary px-3 py-1 font-body text-sm font-medium text-primary-foreground">
+          <h3 className="font-semibold text-foreground text-lg font-sans">{name}</h3>
+          <span className="whitespace-nowrap rounded-full bg-primary px-2.5 py-0.5 font-body text-xs font-medium text-primary-foreground">
             {price}
           </span>
         </div>
-        {description && <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">
+        {description && <p className="mt-1.5 font-body text-xs leading-relaxed text-muted-foreground">
             {description}
           </p>}
       </div>
@@ -97,31 +97,29 @@ const MenuSection = () => {
     name: "Juicy Amber Wine Core",
     price: "€5.00"
   }];
-  return <section id="menu" className="bg-background py-20 md:py-28">
+  return <section id="menu" className="bg-background py-12 md:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="mb-10 text-center">
-          
-          <h2 className="mt-3 text-4xl font-bold text-foreground font-sans md:text-6xl">Our Menu</h2>
-          
+        <div className="mb-6 text-center">
+          <h2 className="text-3xl font-bold text-foreground font-sans md:text-4xl">Our Menu</h2>
         </div>
 
         {/* Burgers Grid */}
-        <div className="mb-16">
-          <h3 className="mb-8 font-semibold text-foreground text-3xl font-sans">Burgers</h3>
-          <div className="grid gap-8 md:grid-cols-2">
+        <div className="mb-8">
+          <h3 className="mb-4 font-semibold text-foreground text-xl font-sans">Burgers</h3>
+          <div className="grid gap-6 md:grid-cols-2">
             <MenuItem name="House Special Smash Cheeseburger" price="€9.50" description="On brioche bun, with 100% beef double patty and spicy mayo + pickle relish." image={houseSpecial} featured />
             <MenuItem name="Double Smash Cheeseburger" price="€9.50" description="On brioche bun, with 100% beef patty, ketchup, mustard, homemade pickles, and onions." image={cheeseburger} featured />
           </div>
         </div>
 
         {/* Sides */}
-        <div className="mb-16 rounded-2xl bg-primary/30 p-8">
-          <h3 className="mb-6 text-2xl font-semibold text-foreground font-sans">Sides</h3>
+        <div className="mb-8 rounded-xl bg-primary/30 p-5">
+          <h3 className="mb-3 text-xl font-semibold text-foreground font-sans">Sides</h3>
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-lg text-foreground font-sans">French Fries</span>
-              <p className="font-body text-sm text-muted-foreground">Golden, crispy, and perfectly salted</p>
+              <span className="text-base text-foreground font-sans">French Fries</span>
+              <p className="font-body text-xs text-muted-foreground">Golden, crispy, and perfectly salted</p>
             </div>
             <span className="rounded-full bg-teal px-4 py-2 font-body text-sm font-medium text-white">
               €5.00
