@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-float">
+      <div className="absolute bottom-8 inset-x-0 z-10 flex justify-center animate-float">
         <div className="flex flex-col items-center gap-2 text-muted-foreground">
           <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
