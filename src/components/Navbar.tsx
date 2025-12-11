@@ -59,7 +59,7 @@ const Navbar = () => {
             href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-2.5 font-body text-sm font-medium text-secondary-foreground transition-all hover:opacity-90"
+            className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-2.5 font-body text-sm font-medium text-white transition-all hover:bg-teal-light"
           >
             Order on Wolt
           </a>
@@ -111,7 +111,7 @@ const Navbar = () => {
               href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 font-body text-sm font-medium text-secondary-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 font-body text-sm font-medium text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Order on Wolt

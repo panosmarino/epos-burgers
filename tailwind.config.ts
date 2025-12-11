@@ -62,6 +62,8 @@ export default {
         charcoal: "hsl(var(--charcoal))",
         cream: "hsl(var(--cream))",
         golden: "hsl(var(--golden))",
+        teal: "hsl(var(--teal))",
+        "teal-light": "hsl(var(--teal-light))",
       },
       fontFamily: {
         display: ["Playfair Display", "serif"],

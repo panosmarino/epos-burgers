@@ -23,10 +23,10 @@ const Hero = () => {
             Order via Wolt for delivery or pickup!
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://wolt.com/en/grc/athens/restaurant/epos-burger" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-secondary px-8 py-3.5 font-body text-sm font-medium text-secondary-foreground shadow-soft transition-all hover:shadow-hover hover:scale-105">
+            <a href="https://wolt.com/en/grc/athens/restaurant/epos-burger" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-teal px-8 py-3.5 font-body text-sm font-medium text-white shadow-soft transition-all hover:bg-teal-light hover:shadow-hover hover:scale-105">
               Order on Wolt
             </a>
-            <a href="#menu" className="inline-flex items-center justify-center rounded-full border-2 border-secondary bg-transparent px-8 py-3.5 font-body text-sm font-medium text-secondary transition-all hover:bg-secondary hover:text-secondary-foreground">
+            <a href="#menu" className="inline-flex items-center justify-center rounded-full border-2 border-teal bg-transparent px-8 py-3.5 font-body text-sm font-medium text-teal transition-all hover:bg-teal hover:text-white">
               View Menu
             </a>
           </div>
