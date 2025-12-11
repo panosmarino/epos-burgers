@@ -97,7 +97,7 @@ const MenuSection = () => {
     name: "Juicy Amber Wine Core",
     price: "€5.00"
   }];
-  return <section id="menu" className="bg-background py-12 md:py-16">
+  return <section id="menu" className="scroll-mt-24 bg-background py-12 md:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-6 text-center">
