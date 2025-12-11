@@ -101,7 +101,7 @@ const MenuSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-6 text-center">
-          <h2 className="text-3xl font-bold text-foreground font-sans md:text-4xl">Our Menu</h2>
+          <h2 className="text-3xl font-bold text-foreground font-sans md:text-5xl">Our Menu</h2>
         </div>
 
         {/* Burgers Grid */}
