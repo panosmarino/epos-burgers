@@ -46,6 +46,8 @@
     --charcoal: 240 10% 25%;
     --cream: 45 40% 96%;
     --golden: 35 90% 55%;
+    --teal: 179 64% 21%;
+    --teal-light: 179 50% 30%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, transparent 0%, hsl(350 30% 98%) 100%);
