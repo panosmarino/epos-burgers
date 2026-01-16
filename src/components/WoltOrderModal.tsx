@@ -32,7 +32,7 @@ const WoltOrderModal = ({ open, onOpenChange }: WoltOrderModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="mx-4 max-w-md rounded-2xl border-border bg-background sm:mx-auto">
+      <DialogContent className="w-[calc(100%-2rem)] max-w-md rounded-2xl border-border bg-background">
         <DialogHeader className="text-center sm:text-center">
           <DialogTitle className="font-sans text-2xl font-bold text-secondary">
             Choose Your Location
