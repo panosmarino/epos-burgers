@@ -2,14 +2,16 @@ import { MapPin, Clock } from "lucide-react";
 import fillerImage from "@/assets/epos_filler_image.jpg";
 interface LocationCardProps {
   name: string;
-  schedule: {
+  schedule?: {
     days: string;
     hours: string;
   }[];
+  specialNote?: string;
 }
 const LocationCard = ({
   name,
-  schedule
+  schedule,
+  specialNote
 }: LocationCardProps) => {
   return <div className="group rounded-2xl bg-card p-8 shadow-soft transition-all duration-300 hover:shadow-hover">
       <div className="mb-6 flex items-center gap-3">
@@ -19,15 +21,22 @@ const LocationCard = ({
         <h3 className="text-2xl font-semibold text-foreground font-sans">{name}</h3>
       </div>
       
-      <div className="space-y-3">
-        {schedule.map((item, index) => <div key={index} className="flex items-start gap-3">
-            <Clock className="mt-0.5 h-4 w-4 text-muted-foreground" />
-            <div>
-              <span className="font-body text-sm font-medium text-foreground">{item.days}</span>
-              <span className="font-body text-sm text-muted-foreground"> — {item.hours}</span>
-            </div>
-          </div>)}
-      </div>
+      {specialNote ? (
+        <div className="flex items-start gap-3">
+          <Clock className="mt-0.5 h-4 w-4 text-muted-foreground" />
+          <span className="font-body text-sm font-medium text-foreground">{specialNote}</span>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {schedule?.map((item, index) => <div key={index} className="flex items-start gap-3">
+              <Clock className="mt-0.5 h-4 w-4 text-muted-foreground" />
+              <div>
+                <span className="font-body text-sm font-medium text-foreground">{item.days}</span>
+                <span className="font-body text-sm text-muted-foreground"> — {item.hours}</span>
+              </div>
+            </div>)}
+        </div>
+      )}
     </div>;
 };
 const LocationsSection = () => {
@@ -52,6 +61,9 @@ const LocationsSection = () => {
       days: "Friday – Saturday",
       hours: "12:00–01:30"
     }]
+  }, {
+    name: "Antiparos",
+    specialNote: "Open only during the summer"
   }];
   return <section id="locations" className="bg-muted py-20 md:py-28">
       <div className="container mx-auto px-6">
@@ -62,7 +74,7 @@ const LocationsSection = () => {
               Find Us
             </span>
             <h2 className="mt-3 text-4xl font-bold text-foreground md:text-5xl font-sans">Visit Our Locations</h2>
-            <p className="mt-4 font-body text-lg text-muted-foreground">Two premises thoughtfully positioned across Athens</p>
+            <p className="mt-4 font-body text-lg text-muted-foreground">Three premises thoughtfully positioned across Greece</p>
 
             <div className="mt-10 space-y-6">
               {locations.map(location => <LocationCard key={location.name} {...location} />)}

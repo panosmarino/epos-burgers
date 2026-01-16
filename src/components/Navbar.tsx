@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.jpg";
 import { Menu, X, Instagram } from "lucide-react";
+import WoltOrderModal, { useWoltModal } from "@/components/WoltOrderModal";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isOpen, openModal, setIsOpen } = useWoltModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,14 +57,12 @@ const Navbar = () => {
           >
             <Instagram className="h-5 w-5" />
           </a>
-          <a
-            href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={openModal}
             className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-2.5 font-body text-sm font-medium text-white transition-all hover:bg-teal-light"
           >
             Order on Wolt
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -107,18 +107,19 @@ const Navbar = () => {
               <Instagram className="h-5 w-5" />
               Instagram
             </a>
-            <a
-              href="https://wolt.com/en/grc/athens/restaurant/epos-burger"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openModal();
+              }}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 font-body text-sm font-medium text-white"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Order on Wolt
-            </a>
+            </button>
           </div>
         </div>
       )}
+      <WoltOrderModal open={isOpen} onOpenChange={setIsOpen} />
     </nav>
   );
 };

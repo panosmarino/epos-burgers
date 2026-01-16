@@ -121,7 +121,7 @@ const MenuSection = () => {
               <span className="text-base text-foreground font-sans">French Fries</span>
               <p className="font-body text-xs text-muted-foreground">Golden, crispy, and perfectly salted</p>
             </div>
-            <span className="rounded-full bg-teal px-4 py-2 font-body text-sm font-medium text-white">
+            <span className="font-body text-sm font-medium text-muted-foreground">
               €5.00
             </span>
           </div>

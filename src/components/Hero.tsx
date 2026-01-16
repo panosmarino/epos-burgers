@@ -1,6 +1,10 @@
 import bannerImage from "@/assets/epos_banner.jpg";
 import logo from "@/assets/logo.jpg";
+import WoltOrderModal, { useWoltModal } from "@/components/WoltOrderModal";
+
 const Hero = () => {
+  const { isOpen, openModal, setIsOpen } = useWoltModal();
+
   return <section className="relative min-h-screen overflow-hidden">
       {/* Banner Image Background */}
       <div className="absolute inset-0">
@@ -23,13 +27,14 @@ const Hero = () => {
             Order via Wolt for delivery or pickup!
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://wolt.com/en/grc/athens/restaurant/epos-burger" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-teal px-8 py-3.5 font-body text-sm font-medium text-white shadow-soft transition-all hover:bg-teal-light hover:shadow-hover hover:scale-105">
+            <button onClick={openModal} className="inline-flex items-center justify-center rounded-full bg-teal px-8 py-3.5 font-body text-sm font-medium text-white shadow-soft transition-all hover:bg-teal-light hover:shadow-hover hover:scale-105">
               Order on Wolt
-            </a>
+            </button>
             <a href="#menu" className="inline-flex items-center justify-center rounded-full border-2 border-teal bg-transparent px-8 py-3.5 font-body text-sm font-medium text-teal transition-all hover:bg-teal hover:text-white">
               View Menu
             </a>
           </div>
+          <WoltOrderModal open={isOpen} onOpenChange={setIsOpen} />
         </div>
       </div>
 
