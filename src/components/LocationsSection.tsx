@@ -1,5 +1,5 @@
 import { MapPin, Clock } from "lucide-react";
-import fillerImage from "@/assets/epos_filler_image.jpeg";
+import fillerImage from "@/assets/epos_filler_image.jpg";
 interface LocationCardProps {
   name: string;
   schedule: {
