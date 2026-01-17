@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: eposburger.com
+**URL**: https://eposburger.com
 
 ## How can I edit this code?
 
